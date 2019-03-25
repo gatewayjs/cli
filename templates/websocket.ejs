@@ -1,0 +1,22 @@
+const { Websocket } = require('@gatewayjs/gateway');
+
+@Websocket.Room('/test')
+class <%=className%> {
+  // when connection is active
+  connect() {
+    console.log('connected');
+  }
+
+  @Websocket.Event
+  signal(socket) {
+    socket.emit('signal', 'test');
+  }
+
+  // when exit websocket connection
+  @Websocket.Event
+  disconnect() {
+
+  }
+}
+
+module.exports = <%=className%>;

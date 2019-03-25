@@ -1,0 +1,11 @@
+const { Http, Controller } = require('@gatewayjs/gateway');
+
+@Controller
+class <%=className%> {
+  @Http.GET
+  async Home() {
+    return 'Hello world!';
+  }
+}
+
+module.exports = <%=className%>;

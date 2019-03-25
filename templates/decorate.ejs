@@ -1,0 +1,16 @@
+import { Decorate } from '@gatewayjs/gateway';
+class <%=className%> extends Decorate {
+  constructor() {
+    super();
+  }
+  interfaceWillInject(...value) {
+    return (target, property, descriptor) => {
+      this.set(descriptor.value, value);
+    }
+  }
+  interfaceDidRendered(data, { ctx, options }) {
+    
+  }
+}
+
+module.exports = <%=className%>;
